@@ -74,7 +74,6 @@ public class Controller : MonoBehaviour {
     	}
 
 
-
     DisplayHealth.text = Health.ToString();
 }
 
@@ -95,4 +94,5 @@ public class Controller : MonoBehaviour {
     public void Dead(){
     	SceneManager.LoadScene(DeadScene);
     }
+
 }
