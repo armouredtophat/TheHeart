@@ -632,7 +632,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &761007556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -651,6 +651,19 @@ MonoBehaviour:
   heading: 0
   Health: 100
   DisplayHealth: {fileID: 1879432236}
+  HealthHeart: {fileID: 1176494033}
+  Bubbles:
+  - {fileID: 21300000, guid: fad8c7477a54dc5428e853ac4ec23782, type: 3}
+  - {fileID: 21300000, guid: 9bc84cbe1937edb448a54208b2efc392, type: 3}
+  - {fileID: 21300000, guid: 27e62e410707b3d499c15af1d196eb0d, type: 3}
+  - {fileID: 21300000, guid: f97c7fb48c01cac40a99759b5c78804c, type: 3}
+  - {fileID: 21300000, guid: 8b903dd82164b4f48b989e315e0505e1, type: 3}
+  - {fileID: 21300000, guid: 05404963f75240f4988183a95c4b8705, type: 3}
+  - {fileID: 21300000, guid: d5a76126a71fe984fbef7f1b7a66c2ce, type: 3}
+  - {fileID: 21300000, guid: 0cbc77988526d8543861efae148dccb1, type: 3}
+  - {fileID: 21300000, guid: 814cce562256ee548aab92b422ffff9b, type: 3}
+  - {fileID: 21300000, guid: 59051f3834db8bd4a9b464b543c30c03, type: 3}
+  - {fileID: 21300000, guid: 60d7c34bfc7b8b24dad7538c1f56ee43, type: 3}
   speed: 3
 --- !u!212 &761007557
 SpriteRenderer:
@@ -708,7 +721,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 761007553}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.840634, y: -0.57857513, z: -2.7480533}
+  m_LocalPosition: {x: 1.840634, y: -0.57857513, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 557737683}

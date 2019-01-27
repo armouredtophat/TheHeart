@@ -13,6 +13,8 @@ public class Controller : MonoBehaviour {
     public float heading;
     public int Health = 100;
     public Text DisplayHealth;
+    public Image HealthHeart;
+    public Sprite[] Bubbles;
 
     //floats for buttons and rotations as well as movement speed. 
     public float speed;
@@ -34,7 +36,41 @@ public class Controller : MonoBehaviour {
         transform.rotation = Quaternion.Euler(0f,0f,heading*Mathf.Rad2Deg);
 
     }
-    	
+    	if( Health == 90){
+    		HealthHeart.sprite = Bubbles[1];
+    	}
+    	if( Health == 80){
+    		HealthHeart.sprite = Bubbles[2];
+    	}
+    	if( Health == 70){
+    		HealthHeart.sprite = Bubbles[3];
+    	}
+    	if( Health == 60){
+    		HealthHeart.sprite = Bubbles[4];
+    	}
+    	if( Health == 50){
+    		HealthHeart.sprite = Bubbles[5];
+    	}
+    	if( Health == 40){
+    		HealthHeart.sprite = Bubbles[6];
+    	}
+    	if( Health == 30){
+    		HealthHeart.sprite = Bubbles[7];
+    	}
+    	if( Health == 20){
+    		HealthHeart.sprite = Bubbles[8];
+    	}
+    	if( Health == 10){
+    		HealthHeart.sprite = Bubbles[9];
+    	}
+    	if( Health == 0){
+    		HealthHeart.sprite = Bubbles[10];
+    	}
+
+
+
+
+
 
     DisplayHealth.text = Health.ToString();
 }
@@ -49,7 +85,7 @@ public class Controller : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D col){
     	if (col.gameObject.tag == "Enemy")
         {
-            Health = Health - 20;
+            Health = Health - 10;
         }
     }
     
