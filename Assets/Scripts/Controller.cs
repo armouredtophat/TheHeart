@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Controller : MonoBehaviour {
     //Script for controlling the player. 
@@ -21,6 +22,7 @@ public class Controller : MonoBehaviour {
     public float speed;
     private float buttonX;
     private float buttonY;
+    public string DeadScene;
 
     // Update is called once per frame
     void Update(){
@@ -68,7 +70,7 @@ public class Controller : MonoBehaviour {
     		HealthHeart.sprite = Bubbles[9];
     	}
     	if( Health == 0){
-    		HealthHeart.sprite = Bubbles[10];
+    		Dead();
     	}
 
 
@@ -90,4 +92,7 @@ public class Controller : MonoBehaviour {
         }
     }
     
+    public void Dead(){
+    	SceneManager.LoadScene(DeadScene);
+    }
 }
