@@ -15,6 +15,7 @@ public class Controller : MonoBehaviour {
     public Text DisplayHealth;
     public Image HealthHeart;
     public Sprite[] Bubbles;
+    public Animator MovementDetect;
 
     //floats for buttons and rotations as well as movement speed. 
     public float speed;
@@ -26,6 +27,9 @@ public class Controller : MonoBehaviour {
      
         buttonX = Input.GetAxis("Horizontal");
         buttonY = Input.GetAxis("Vertical");    
+
+        MovementDetect.SetFloat("HMove", buttonX);
+        MovementDetect.SetFloat("VMove", buttonY);
 
         if(buttonX != 0){
         float heading = Mathf.Atan2(-buttonX,buttonY);
@@ -66,9 +70,6 @@ public class Controller : MonoBehaviour {
     	if( Health == 0){
     		HealthHeart.sprite = Bubbles[10];
     	}
-
-
-
 
 
 
